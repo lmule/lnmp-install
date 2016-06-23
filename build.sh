@@ -1,8 +1,8 @@
 #!/bin/bash
 
 current_dir=$(pwd)
-mkdir temp
+mkdir -p temp
 
-. lnmp.conf
-. basic/basic.sh
-. nginx/nginx.sh
+. ./lnmp.conf
+. ./basic/basic.sh
+. ./nginx/nginx.sh

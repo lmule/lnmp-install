@@ -14,6 +14,7 @@ if [ $? -ne 0  ]
 then  
     useradd -M -g $default_web_user -c 'Web User' -s /sbin/nologin $default_web_user
 fi
+yum -y install gcc gcc-c++ ntp make openssl openssl-devel cmake pcre pcre-devel libpng libpng-devel libjpeg-6b libjpeg-devel-6b freetype freetype-devel gd gd-devel zlib zlib-devel  gcc-c++ libXpm libXpm-devel ncurses ncurses-devel libmcrypt libmcrypt-devel libxml2 libxml2-devel imake autoconf automake screen sysstat compat-libstdc++-33 curl curl-devel perl bzip2 bzip2-devel bzip2-libs python python-setuptools bison bison-devel bison-runtime libtool libevent dos2unix rsync ImageMagick ImageMagick-perl ImageMagick-devel icu libicu libicu-devel readline-devel  libaio-devel
 
 # Check if user is root
 #if [ $(id -u) != "0" ]; then

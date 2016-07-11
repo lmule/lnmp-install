@@ -7,3 +7,4 @@ mkdir -p temp
 #. ./basic/basic.sh
 #. ./nginx/nginx.sh
 #. ./php/php.sh
+. ./mysql/percona.sh

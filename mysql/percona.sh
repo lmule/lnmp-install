@@ -14,11 +14,11 @@ make install
 
 cd ${current_dir}/${percona_prefix}
 cp -r ./etc/my.cnf ${percona_install_dir}etc/
-chown -R ${default_mysql_user}:${default_mysql_user} ${percona_install_dir}
 ${percona_install_dir}scripts/mysql_install_db --user=${default_mysql_user} --basedir=${percona_install_dir} --datadir=${percona_install_dir}data --defaults-file=${percona_install_dir}etc/my.cnf
-exit
 ${percona_install_dir}bin/mysqld_safe &
-${percona_install_dir}bin/mysqladmin -h 127.0.0.1 -u root password ${percona_default_password}
+#mysqladmin -h 127.0.0.1 -u root password 123456 2>/dev/null
+${percona_install_dir}bin/mysqladmin -h 127.0.0.1 -u root password ${percona_default_password} 2>/dev/null
+chown -R ${default_mysql_user}:${default_mysql_user} ${percona_install_dir}
 
 cp ${current_dir}/temp/${percona_prefix}/support-files/mysql.server /etc/init.d/mysql
 chmod +x /etc/init.d/mysql
